@@ -3,14 +3,13 @@ package com.bridgelab.arrays;
 import java.util.Arrays;
 
 public class ElementsOfAnArray {
+    // public class EvenPositionArray {
     public static void main(String[] args) {
-        int[] arr = new int[]{7, 5, 7, 4, 8, 6, 8, 1, 4, 3, 9, 5, 3};
-        System.out.println("Duplicate elements in given array: ");
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i] == arr[j])
-                    System.out.println(arr[j]);
-            }
+        int[] arr = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+        for (int i = 1; i < arr.length; i = i + 2) {
+
+            System.out.println(arr[i]);
         }
     }
 }
