@@ -3,36 +3,28 @@ package com.bridgelab.arrays;
 import java.util.Arrays;
 
 public class ElementsOfAnArray {
-    //public class SecondLargestNumberInAnArray {
-    static void print2largest(int arr[], int arr_size)
-    {
-        int i, first, second;
-        if (arr_size < 2) {
-            System.out.println(" Invalid Input ");
-            return;
+    //public class SmallArrayElement {
+    public static void main(String[] args) {
+        int[] intArray = new int[] { 12, 112, 734, 5, 5313 };
+
+        //System.out.println("Given array ");
+
+        for (int i = 0; i < intArray.length; i++) {
+
+            System.out.println(intArray[i]);
         }
-        int largest = second = Integer.MIN_VALUE;
-        for(i = 0; i < arr_size; i++)
-        {
-            largest = Math.max(largest, arr[i]);
+        int minValue = intArray[0];
+        for (int i = 0; i < intArray.length; i++) {
+            if (intArray[i] < minValue)
+
+                minValue = intArray[i];
         }
 
-        for(i = 0; i < arr_size; i++)
-        {
-            if (arr[i] != largest)
-                second = Math.max(second, arr[i]);
-        }
-        if (second == Integer.MIN_VALUE)
-            System.out.println("There is no second " + "largest element");
-        else
-            System.out.printf("The second largest " + "element is %d", second);
+        System.out.println(
+                "Smallest element present in given array: " + minValue);
     }
-    public static void main(String[] args)
-    {
-        int arr[] = { 12, 35, 1, 10, 34, 1 };
-        int n = arr.length;
-        print2largest(arr, n);
-    }
+
 }
+
 
 
